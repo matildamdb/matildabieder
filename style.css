@@ -57,4 +57,5 @@ main{padding:48px 0 64px}
 .timeline .item::before{top:12px}
 .timeline .item:first-of-type::before{top:-6px}
 h1{font-size:clamp(2.8rem,15vw,4.3rem)}
+
 }
