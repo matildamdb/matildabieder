@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal website for [Your Name] — interests, projects, and writing.">
+  <title>[Your Name] — Personal Website</title>
+  <style>
+    :root {
+      --paper: #faf9f6;
+      --ink: #20211f;
+      --muted: #6d706b;
+      --line: #dedfd8;
+      --accent: #426b58;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    header { padding: 28px 0 20px; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+    .brand { font-size: .96rem; font-weight: 650; letter-spacing: -.03em; text-decoration: none; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { color: var(--muted); font-size: .9rem; text-decoration: none; }
+    nav a:hover { color: var(--ink); }
+    main { padding: 76px 0 90px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 58px; align-items: start; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .13em; font-size: .73rem; font-weight: 700; }
+    h1 { font-size: clamp(2.7rem, 7vw, 5rem); letter-spacing: -.075em; line-height: 1.02; font-weight: 620; margin: 16px 0 25px; max-width: 720px; }
+    .intro { font-size: 1.14rem; line-height: 1.8; color: #4d504b; max-width: 660px; }
+    .portrait {
+      aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: 3px;
+      background: #eeede7; display: flex; align-items: center; justify-content: center;
+      color: #777a72; text-align: center; padding: 20px; font-size: .85rem;
+    }
+    .links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 25px; font-size: .92rem; }
+    .links a { text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+    section { margin-top: 86px; scroll-margin-top: 30px; }
+    .section-head { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 30px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0; font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); font-weight: 700; }
+    .section-body { max-width: 690px; }
+    .section-body p:first-child { margin-top: 0; }
+    .item { display: grid; grid-template-columns: 125px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .date { color: var(--muted); font-size: .87rem; }
+    .item h3 { font-size: 1.04rem; line-height: 1.4; margin: 0 0 5px; font-weight: 650; }
+    .item p { margin: 0; color: #5b5e58; font-size: .94rem; }
+    .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; color: var(--muted); font-size: .76rem; margin: 10px 5px 0 0; }
+    .contact { padding: 28px; background: #f0f0e9; border: 1px solid var(--line); }
+    .contact p { margin-top: 0; }
+    footer { border-top: 1px solid var(--line); padding: 23px 0 30px; color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      header { padding-top: 20px; }
+      .nav { align-items: flex-start; flex-direction: column; gap: 12px; }
+      nav { gap: 15px; }
+      main { padding: 48px 0 64px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; }
+      .portrait { max-width: 190px; aspect-ratio: 1 / 1; }
+      section { margin-top: 62px; }
+      .section-head { grid-template-columns: 1fr; gap: 12px; }
+      .item { grid-template-columns: 1fr; gap: 4px; }
+      h1 { font-size: clamp(2.8rem, 15vw, 4.3rem); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#">[Your Name]</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work & Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Personal website · Portfolio</div>
+        <h1>Hello, I’m [Your Name].</h1>
+        <p class="intro">
+          I’m a student interested in [your main interests]. This is a place to share what I’m learning,
+          the projects I’m working on, and the ideas I keep coming back to.
+        </p>
+        <div class="links">
+          <a href="#work">Explore my work ↓</a>
+          <a href="mailto:you@example.com">Email me ↗</a>
+          <a href="https://github.com/yourusername">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="portrait" role="img" aria-label="Placeholder for a portrait photo">Your photo<br>or a simple graphic</div>
+    </div>
+
+    <section id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <div class="section-body">
+          <p>
+            I’m currently studying [subject / field] and exploring the connections between
+            [interest one], [interest two], and [interest three]. I like asking questions,
+            learning independently, and turning ideas into something concrete.
+          </p>
+          <p>
+            This site is an evolving record of my work and interests—not just a résumé.
+            I’ll update it as I learn, build, and figure out what I want to pursue next.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <div class="section-body">
+          <p>Projects, coursework, experiments, or research that show what you care about and how you think.</p>
+          <div class="item">
+            <div class="date">2026 · Project</div>
+            <div>
+              <h3><a href="#">Project title goes here</a></h3>
+              <p>A short explanation of the question you explored, what you made, and what you learned.</p>
+              <span class="tag">Research</span><span class="tag">In progress</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">2025 · Coursework</div>
+            <div>
+              <h3><a href="#">Another project or paper</a></h3>
+              <p>Describe the contribution in one or two clear sentences. Link to the work if it is public.</p>
+              <span class="tag">Writing</span><span class="tag">Analysis</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">Ongoing</div>
+            <div>
+              <h3><a href="#">A small thing you built</a></h3>
+              <p>Personal projects count too: a useful tool, a reading list, a creative experiment, or a community effort.</p>
+              <span class="tag">Personal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="section-head">
+        <h2>Interests</h2>
+        <div class="section-body">
+          <p>Some subjects I’m curious about right now:</p>
+          <p>
+            <span class="tag">[Interest one]</span>
+            <span class="tag">[Interest two]</span>
+            <span class="tag">[Interest three]</span>
+            <span class="tag">[Interest four]</span>
+          </p>
+          <p>These will change over time. Curiosity is part of the point.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="section-head">
+        <h2>Notes & writing</h2>
+        <div class="section-body">
+          <p>A lightweight place for short essays, reading notes, reflections, and things you want to remember.</p>
+          <div class="item">
+            <div class="date">Coming soon</div>
+            <div>
+              <h3><a href="#">A question I’ve been thinking about</a></h3>
+              <p>Replace this with a post, a public document, or remove the section until you have something to share.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <div class="section-body contact">
+          <p>If you’d like to talk about a project, share a resource, or just say hello, feel free to reach out.</p>
+          <p><a href="mailto:you@example.com">you@example.com</a></p>
+          <p><a href="https://www.linkedin.com/">LinkedIn</a> · <a href="https://github.com/yourusername">GitHub</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> [Your Name]</span>
+      <span>Made simply, and updated over time.</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
