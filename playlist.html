@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Matilda Bieder's all-time favourite playlist.">
+  <title>Playlist – Matilda Bieder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Matilda Bieder</a>
+      <nav aria-label="Main navigation">
+        <a href="studies.html">Studies</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="zine.html">Zine</a>
+        <a href="playlist.html" aria-current="page">Playlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page">Playlist</h1>
+    <section>
+      <div class="section-head">
+        <h2>All-time favourites</h2>
+        <div class="section-body">
+          <div id="player"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Matilda Bieder</span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    // Paste your Spotify playlist link between the quotes, e.g. "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
+    var PLAYLIST = "";
+    var box = document.getElementById("player");
+    if (PLAYLIST) {
+      var src = PLAYLIST.replace("open.spotify.com/", "open.spotify.com/embed/");
+      box.innerHTML = '<iframe title="Playlist" src="' + src + '" height="420" loading="lazy" allow="encrypted-media"></iframe>';
+    } else {
+      box.innerHTML = '<p>No playlist yet. Open <code>playlist.html</code>, find <code>var PLAYLIST</code> and paste your Spotify link between the quotes.</p>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A timeline of Matilda Bieder's year.">
+  <title>Zine – Matilda Bieder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Matilda Bieder</a>
+      <nav aria-label="Main navigation">
+        <a href="studies.html">Studies</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="zine.html" aria-current="page">Zine</a>
+        <a href="playlist.html">Playlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page">Zine</h1>
+    <section>
+      <div class="section-head">
+        <h2>My year</h2>
+        <div class="section-body"><div class="timeline">
+        <div class="item">
+          <div class="date">January 2026</div>
+          <div>
+            <h3>Title of the moment</h3>
+            <p>A few lines about what happened.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="date">February 2026</div>
+          <div>
+            <h3>Title of the moment</h3>
+            <p>A few lines about what happened.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="date">March 2026</div>
+          <div>
+            <h3>Title of the moment</h3>
+            <p>A few lines about what happened.</p>
+          </div>
+        </div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Matilda Bieder</span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
