@@ -38,16 +38,22 @@
     </div>
   </footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  <script>
-    // Paste your Spotify playlist link between the quotes, e.g. "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
-    var PLAYLIST = "";
-    var box = document.getElementById("player");
-    if (PLAYLIST) {
-      var src = PLAYLIST.replace("open.spotify.com/", "open.spotify.com/embed/");
-      box.innerHTML = '<iframe title="Playlist" src="' + src + '" height="420" loading="lazy" allow="encrypted-media"></iframe>';
-    } else {
-      box.innerHTML = '<p>No playlist yet. Open <code>playlist.html</code>, find <code>var PLAYLIST</code> and paste your Spotify link between the quotes.</p>';
-    }
-  </script>
+<script>
+    var PLAYLIST = "https://music.youtube.com/playlist?list=PLPziQc90oPCw&si=9hhGjH9R1OGgm28O";
+
+  var box = document.getElementById("player");
+  var match = PLAYLIST.match(/[?&]list=([^&]+)/);
+
+  if (match) {
+    var id = match[1];
+    box.innerHTML =
+      '<iframe title="Playlist" height="400" loading="lazy" ' +
+      'src="https://www.youtube.com/embed/videoseries?list=' + id + '" ' +
+      'allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>' +
+      '<p><a href="https://music.youtube.com/playlist?list=' + id + '">Open in YouTube Music ↗</a></p>';
+  } else {
+    box.innerHTML = '<p>No playlist yet. Open <code>playlist.html</code>, find <code>var PLAYLIST</code> and paste your YouTube Music link between the quotes.</p>';
+  }
+</script>
 </body>
 </html>
