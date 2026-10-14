@@ -20,7 +20,7 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
 nav a[aria-current="page"]{border-bottom:1px solid var(--ink);padding-bottom:2px}
 
 /* ---------- Startseite ---------- */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:58px;align-items:start}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:3rem;align-items:start}
 .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.13em;font-size:.73rem;font-weight:700}
 h1{font-size:clamp(2.7rem,7vw,5rem);letter-spacing:-.075em;line-height:1.02;font-weight:620;margin:16px 0 25px;max-width:720px}
 h1.page{font-size:clamp(2.2rem,5vw,3.4rem);margin:0 0 50px}
