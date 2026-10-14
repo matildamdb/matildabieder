@@ -4,6 +4,11 @@
 :root{--paper:#f5f3f2;--ink:#140217;--muted:#595959;--line:#bdbdbd;--accent:#e60077;--max:980px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+html{scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--ink);border-radius:3px}
+
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:4px}
 a:hover{color:var(--accent)}
