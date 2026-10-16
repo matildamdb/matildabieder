@@ -25,6 +25,7 @@
     <section>
       <div class="section-head">
         <h2>All-time favourites</h2>
+        <p>My dad made a tape in 1999 with songs, part of songs, classical pieses that captured what he considered really important to him. Inspired by that I put together 29 songs that mean a lot to me. Somehow it feels right, and if something is missing at the same time.</p>
         <div class="section-body">
             <div class="item"><div class="date">01</div><div><h3><a href="https://www.youtube.com/watch?v=JdSn9n8pXGw">EPILOGUE:Young Forever</a></h3><p>BTS</p></div></div>
             <div class="item"><div class="date">02</div><div><h3><a href="https://www.youtube.com/watch?v=d0BFcsf_diA">Far Away</a></h3><p>EASHA</p></div></div>
@@ -55,35 +56,14 @@
             <div class="item"><div class="date">27</div><div><h3><a href="https://www.youtube.com/watch?v=vQgb-A265jM">F.D.M.D.H.</a></h3><p>Electric Callboy</p></div></div>
             <div class="item"><div class="date">28</div><div><h3><a href="https://www.youtube.com/watch?v=GYa5AATdQZU">Picture You</a></h3><p>Chappell Roan</p></div></div>
             <div class="item"><div class="date">29</div><div><h3><a href="https://www.youtube.com/watch?v=GaFoS-Kza8U">1-800-273-8255</a></h3><p>Logic</p></div></div>
-
-<p><a href="https://music.youtube.com/playlist?list=PLPziQc90oPCw">Open the full playlist in YouTube Music ↗</a></p>          
-          <div id="player"></div>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="wrap footer-inner">
       <span>© <span id="year">2026</span> Matilda Bieder</span>
     </div>
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script>
-    var PLAYLIST = "https://music.youtube.com/playlist?list=PLPziQc90oPCw&si=9hhGjH9R1OGgm28O";
-
-  var box = document.getElementById("player");
-  var match = PLAYLIST.match(/[?&]list=([^&]+)/);
-
-  if (match) {
-    var id = match[1];
-    box.innerHTML =
-      '<iframe title="Playlist" height="400" loading="lazy" ' +
-      'src="https://www.youtube.com/embed/videoseries?list=' + id + '" ' +
-      'allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>';
-  } else {
-    box.innerHTML = '<p>No playlist yet. Open <code>playlist.html</code>, find <code>var PLAYLIST</code> and paste your YouTube Music link between the quotes.</p>';
-  }
-</script>
 </body>
 </html>
